@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<title>skroller</title>
+</head>
+
+<body>
+<div id="skrollr-body"><!--スマホの場合は全体をid="skrollr-body"で囲む-->
+<div id="scr">スクロール値：0</div><!--スクロール値表示用-->
+<div id="wrapper">
+
+<div id="hmm" data-0="top:600px;left:-220px;transform:rotate(0deg);" data-300="top:600px;left:600px;"
+	          data-600="top:400px;left:800px;transform:rotate(-90deg);" data-900="top:200px;left:600px;transform:rotate(-180deg);"
+	          data-1200="top:400px;left:400px;transform:rotate(-270deg);" data-1500="top:600px;left:600px;transform:rotate(-360deg);"></div>
+
+</div>
+</div>
+
+<!--js読み込みはbody最下部に！-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/skrollr.min.js"></script>
+<script>
+	var s = skrollr.init();
+</script>
+
+<!--スクロール値表示用-->
+<script>
+	$(window).scroll(function() {
+		$('#scr').text('スクロール値：' + $(this).scrollTop());
+	});
+</script>
+</body>
+</html>
+
+<!--<div id="box4" data-400="top:500px;left:-300px;opacity:0;" data-2000="top:500px;left:700px;opacity:1;">box4</div>-->
